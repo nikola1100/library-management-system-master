@@ -1,0 +1,61 @@
+System Zarządzania Biblioteką - Raport Projektu
+
+Wprowadzenie
+
+System Zarządzania Biblioteką to aplikacja służąca do efektywnego zarządzania operacjami bibliotecznymi. Umożliwia użytkownikom dodawanie, aktualizowanie, usuwanie i wyszukiwanie książek, zarządzanie rejestracją użytkowników, śledzenie wypożyczeń i zwrotów książek oraz generowanie raportów. System został zbudowany w oparciu o ASP.NET z bazą danych SQL, co czyni go solidnym rozwiązaniem do automatyzacji biblioteki.
+
+Wykorzystane narzędzia techniczne
+
+Język programowania: C# (do logiki backendu)
+
+Framework: ASP.NET MVC (do implementacji aplikacji webowej)
+
+Baza danych: Microsoft SQL Server (do przechowywania książek, użytkowników i transakcji)
+
+Technologie frontendowe: HTML, CSS, JavaScript, Bootstrap (do projektowania interfejsu użytkownika)
+
+Kontrola wersji: GitHub (do zarządzania kodem i współpracy)
+
+IDE: Visual Studio (do tworzenia i debugowania aplikacji)
+
+Główne funkcjonalności
+
+1. Uwierzytelnianie użytkowników i zarządzanie rolami
+
+AccountController.cs obsługuje rejestrację i logowanie użytkowników.
+
+Wykorzystuje ASP.NET Identity do zarządzania rolami użytkowników (Administrator, Bibliotekarz, Czytelnik).
+
+2. Moduł zarządzania książkami
+
+BookController.cs obsługuje operacje CRUD (tworzenie, odczyt, aktualizacja, usuwanie).
+
+Model Book.cs definiuje właściwości, takie jak ISBN, tytuł, autor i dostępność.
+
+3. Wypożyczanie i zwroty książek
+
+TransactionController.cs zarządza wypożyczeniami i zwrotami książek.
+
+System sprawdza dostępność książki przed wypożyczeniem i aktualizuje jej status w bazie danych.
+
+4. Wyszukiwanie i filtrowanie książek
+
+Wykorzystuje zapytania LINQ do filtrowania książek na podstawie tytułu, autora lub gatunku.
+
+Zastosowane podejścia
+
+Architektura MVC – Zapewnia separację warstw dla lepszej organizacji kodu.
+
+Entity Framework – ORM (Object-Relational Mapping) do interakcji z bazą danych.
+
+Uwierzytelnianie i autoryzacja – Bezpieczne logowanie użytkowników za pomocą ASP.NET Identity.
+
+Responsywny interfejs – Bootstrap dla lepszej użyteczności aplikacji.
+
+Obsługa wyjątków – Mechanizmy try-catch do zarządzania błędami.
+
+GitHub do kontroli wersji – Zapewnia efektywną współpracę nad kodem.
+
+Podsumowanie
+
+System Zarządzania Biblioteką automatyzuje procesy związane z obsługą książek, użytkowników i transakcji. Wykorzystanie ASP.NET, SQL Server i architektury MVC zapewnia skalowalność i bezpieczeństwo aplikacji. Możliwe przyszłe ulepszenia obejmują integrację API do wyszukiwania książek online, skanowanie kodów kreskowych dla szybszego wprowadzania książek oraz wsparcie dla aplikacji mobilnych w celu poprawy doświadczenia użytkowników.
